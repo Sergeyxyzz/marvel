@@ -28,6 +28,7 @@ class RandomChar extends Component {
 
     render() {
         const {char:{name, description, thumbnail, homepage, wiki}} = this.state
+
         return (
             <div className="randomchar">
                 <div className="randomchar__block">
@@ -35,7 +36,7 @@ class RandomChar extends Component {
                     <div className="randomchar__info">
                         <p className="randomchar__name">{name}</p>
                         <p className="randomchar__descr">
-                            {description}
+                            {description ? description.slice(0, 20) + '...' : 'Description отсутствует'}
                         </p>
                         <div className="randomchar__btns">
                             <a href={homepage} className="button button__main">
