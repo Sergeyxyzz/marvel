@@ -41,7 +41,7 @@ class RandomChar extends Component {
             error: true
         })
     }
-    
+
 
     updateChar = () => {
         const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000)
@@ -57,6 +57,7 @@ class RandomChar extends Component {
         const errorMessage = error ? <ErrorMessage /> : null
         const spinner = loading ? <Spinner/> : null
         const content = !(loading || error) ? <View char={char}/> : null
+
         return (
             <div className="randomchar">
                 {errorMessage}
